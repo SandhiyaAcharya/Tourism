@@ -1,0 +1,3 @@
+pip install Flask Flask-SQLAlchemy boto3
+pip install flask pandas scikit-learn joblib
+pip install scikit-learn==1.5.2

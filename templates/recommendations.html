@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommendations</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/recommendations.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Insights</h1>
+    </header>
+    <nav>
+        <a href="/" class="back-to-home-nav">Back</a>
+    </nav>
+    
+    <ul>
+        {% for item in recommendations %}
+            <li>
+                <b>{{ item.name }}</b><br>
+                Address: {{ item.address }}<br>
+                Guests: {{ item.numberOfGuests }}<br>
+                Price: {{ item.price }}<br>
+                Room Type: {{ item.roomType }}<br>
+                Stars: 
+<span class="star-rating">
+    {% for i in range(item.stars|round(0, 'floor')|int) %}
+        &#9733; <!-- Filled star -->
+    {% endfor %}
+    {% for i in range(5 - item.stars|round(0, 'floor')|int) %}
+        <span class="empty-star">&#9733;</span> <!-- Empty star styled as light gray -->
+    {% endfor %}
+</span>
+
+
+                <br>
+                <a href="{{ item.map_link }}" target="_blank">View on Map</a>
+            </li>
+        {% endfor %}
+    </ul>
+
+    <a href="/" class="back-to-home">Back to Home</a>
+</body>
+</html>

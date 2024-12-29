@@ -1,0 +1,120 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f9f0;
+    background-image: url("/static/images/index_bg.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #333;
+}
+
+
+header {
+    background-color: #9ACD32;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+/* Navigation bar */
+nav {
+    background-color: #6B8E23;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+nav a {
+    color: white;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    text-align: center;
+}
+
+nav a:hover {
+    background-color:#597521;
+}
+
+.tab-content {
+    display: none;
+    padding: 2rem;
+    background-color: white;
+    margin: 1rem auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+form label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+form input, form button {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button {
+    background-color:#6B8E23;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #597521;
+}
+
+.select2-container--default .select2-selection--single {
+    width: 100%; /* Ensure the selection box fills the container */
+    height: 38px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    line-height: 36px;
+    overflow: visible !important;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+    height: 36px;
+}
+select#location {
+    width: 100%; /* Makes the dropdown fill the width of its container */
+    height: 38px; /* Adjust the height for better appearance */
+    padding: 5px; /* Add some padding for user comfort */
+    border: 1px solid #ccc; /* Add a border to match other form elements */
+    border-radius: 4px; /* Optional: Rounded corners */
+    box-sizing: border-box; /* Include padding and border in width calculation */
+}
+
+/* If using Select2 */
+.select2-container {
+    width: 100% !important; /* Force the Select2 dropdown to fill the width */
+}
+
+.select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
+background-color: #597521 !important;
+}
+
+.select2-container--default .select2-results>.select2-results__options {
+    max-height: 154px !important;}
+
+    
