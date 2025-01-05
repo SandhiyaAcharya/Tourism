@@ -1,0 +1,113 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and font styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f9f0;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-image: url("/static/images/villa_2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Header styles */
+header {
+    background-color: #3D211A;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+/* Navigation bar */
+nav {
+    background-image: linear-gradient(to right,#3D211A, #a07856); /* Gradient from left to right */
+    overflow: hidden;
+    display: flex;
+    padding: 0 10px;
+}
+
+/* Make the first link (Insight) stay on the left side */
+#Insight-tab {
+    margin-right: auto;  /* Pushes other links to the right */
+}
+
+nav a {
+    color: white;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    text-align: center;
+    background-color:transparent !important ;
+}
+
+nav a:hover {
+    background-color: #3D211A;
+}
+
+/* Style for the accommodation list */
+ul {
+    list-style-type: none;
+    padding: 20px;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap onto the next line */
+    gap: 20px; /* Add spacing between list items */
+}
+
+/* Individual accommodation item */
+li {
+    background-color: #fff;
+    padding: 15px;
+    width: 48%; /* Each li takes up 50% of the width (with some gap) */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid #3D211A; /* Olive border for each item */
+    box-sizing: border-box; /* Ensure padding doesn't affect width calculation */
+}
+
+/* Highlighting the accommodation name */
+li b {
+    font-size: 1.4rem;
+    color: #3D211A; /* Olive color for the accommodation name */
+}
+
+/* Styling the address, price, and other details */
+li br {
+    margin-bottom: 10px;
+}
+
+/* Link to the map */
+a {
+    text-decoration: none;
+    color: #3D211A; /* Olive color for links */
+    font-weight: bold;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+/* Styling for bottom Back to Home button */
+
+
+/* Style for the stars */
+.star-rating {
+    color: #FFD700; /* Gold color for stars */
+    font-size: 1.2rem; /* Adjust size as needed */
+    display: inline-block;
+}
+
+.star-rating .empty-star {
+    color: #ccc; /* Light gray for empty stars */
+}
+
