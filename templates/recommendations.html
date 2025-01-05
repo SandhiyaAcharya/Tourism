@@ -7,12 +7,12 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/recommendations.css') }}">
 </head>
 <body>
-    <header>
-        <h1>Insights</h1>
-    </header>
     <nav>
-        <a href="/" class="back-to-home-nav">Back</a>
+        <a href="#" id="Insight-tab">Insights</a>
+        <a href="/" class="back-to-home">Back to Home</a>
+        
     </nav>
+
     
     <ul>
         {% for item in recommendations %}
@@ -39,6 +39,6 @@
         {% endfor %}
     </ul>
 
-    <a href="/" class="back-to-home">Back to Home</a>
+    
 </body>
 </html>

@@ -17,7 +17,7 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh; /* Full viewport height */
-    background-image: url("/static/images/index_bg.jpeg"); /* Optional background image */
+    background-image: url("/static/images/villa_2.jpg"); /* Optional background image */
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;

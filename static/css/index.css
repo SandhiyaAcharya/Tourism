@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f0f9f0;
-    background-image: url("/static/images/index_bg.jpeg");
+    background-image: url("/static/images/villa_2.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -13,10 +13,10 @@ body {
 
 
 header {
-    background-color: #9ACD32;
+    background-color: #3D211A;
     color: white;
     padding: 1rem;
-    text-align: center;
+    text-align: left;
 }
 
 header h1 {
@@ -25,10 +25,15 @@ header h1 {
 
 /* Navigation bar */
 nav {
-    background-color: #6B8E23;
+    background-image: linear-gradient(to right,#3D211A, #a07856); /* Gradient from left to right */
     overflow: hidden;
     display: flex;
-    justify-content: center;
+    padding: 0 10px;
+}
+
+/* Make the first link (Insight) stay on the left side */
+#Insight-tab {
+    margin-right: auto;  /* Pushes other links to the right */
 }
 
 nav a {
@@ -39,7 +44,7 @@ nav a {
 }
 
 nav a:hover {
-    background-color:#597521;
+    background-color: #3D211A;
 }
 
 .tab-content {
@@ -70,14 +75,14 @@ form input, form button {
 }
 
 form button {
-    background-color:#6B8E23;
+    background-color:#a07856;
     color: white;
     border: none;
     cursor: pointer;
 }
 
 form button:hover {
-    background-color: #597521;
+    background-color: #3D211A;
 }
 
 .select2-container--default .select2-selection--single {
@@ -111,7 +116,7 @@ select#location {
 }
 
 .select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
-background-color: #597521 !important;
+background-color: #3D211A !important;
 }
 
 .select2-container--default .select2-results>.select2-results__options {
