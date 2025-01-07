@@ -12,12 +12,15 @@ preprocessor = joblib.load('preprocessor.pkl')
 data.rename(columns={'pricing/rate/amount': 'price'}, inplace=True)
 
 @app.route('/')
-def home():
+def main():
     # Fetch unique location values
     unique_locations = data['address'].dropna().unique()
     unique_locations = sorted(unique_locations)  # Sort alphabetically
     return render_template('index.html', locations=unique_locations)
 
+@app.route('/home')
+def home():
+    return render_template('home.html')
 
 @app.route('/recommend', methods=['POST'])
 def recommend():
