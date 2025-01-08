@@ -3,8 +3,9 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Insights</title>
+        <title>Travonest</title>
         <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.1.0-beta.1/css/select2.min.css" rel="stylesheet" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.1.0-beta.1/js/select2.min.js"></script>
@@ -13,11 +14,65 @@
         
 
         <nav>
-            <a href="#" id="Insight-tab">Insights</a>
+            <span href="" id="Insight-tab">Travonest</span>
+            <a href="#" id="home-tab">Home</a>
             <a href="#" id="recommend-tab">Get Recommendations</a>
             <a href="#" id="predict-tab">Predict Price</a>
         </nav>
 
+            <!-- Home Page Content -->
+    <div id="home-content" class="tab-content active hometab">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="carousel">
+                <div class="carousel-slide">
+                    <img src="{{ url_for('static', filename='images/carousel1.jpg') }}" alt="penthouse">
+                    <div class="carousel-text">
+                        <h2>Travonest</h2>
+                        <p>Welcome to Travonest – Your One-Stop Destination for Smart Travel Planning!</p>
+                    </div>
+                </div>
+              
+               
+            </div>
+        </section>
+        
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Travonest</h2>
+            <p>Travonest helps you plan your trip by providing detailed information on accommodations, including ratings, location, and predicted prices. Make informed travel decisions with ease.</p>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2>Key Features</h2>
+            <ul>
+                <li><strong>Discover Stays:</strong> Search for hotels, villas, and bungalows by location.</li>
+                <li><strong>Star Ratings:</strong> Compare based on customer ratings.</li>
+                <li><strong>Location Info:</strong> Get detailed information about each stay's location.</li>
+                <li><strong>Price Prediction:</strong> Predict accommodation prices for your selected dates.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <h2>How It Works</h2>
+            <ol>
+                <li><strong>Search for Stays:</strong> Enter your destination and travel dates.</li>
+                <li><strong>Compare Options:</strong> Browse stays based on ratings, amenities, and price.</li>
+                <li><strong>Predict Price:</strong> Use our price prediction tool to get an estimated cost.</li>
+                <li><strong>Book Your Stay:</strong> Once you’ve found your ideal stay, proceed to booking!</li>
+            </ol>
+        </div>
+    </section>
+
+    </div>
         <div id="recommend-content" class="tab-content active">
             <h2>Get Recommendations</h2>
             <form action="/recommend" method="POST">
@@ -43,67 +98,67 @@
             <h2>Predict Price</h2>
             <form action="/predict" method="POST">
                 <label for="room_type">Room Type:</label>
-    <select id="room_type" name="room_type" required>
-        <option value="">Select a room type</option>
+                <select id="room_type" name="room_type" required>
+                    <option value="">Select a room type</option>
 
-        <!-- Entire Places -->
-        <optgroup label="Entire Places">
-            <option value="Entire bungalow">Entire bungalow</option>
-            <option value="Entire villa">Entire villa</option>
-            <option value="Entire home">Entire home</option>
-            <option value="Entire vacation home">Entire vacation home</option>
-            <option value="Entire home/apt">Entire home/apt</option>
-            <option value="Entire cottage">Entire cottage</option>
-            <option value="Entire condo">Entire condo</option>
-            <option value="Entire rental unit">Entire rental unit</option>
-            <option value="Entire serviced apartment">Entire serviced apartment</option>
-            <option value="Entire place">Entire place</option>
-            <option value="Entire cabin">Entire cabin</option>
-            <option value="Entire chalet">Entire chalet</option>
-        </optgroup>
+                        <!-- Entire Places -->
+                        <optgroup label="Entire Places">
+                            <option value="Entire bungalow">Entire bungalow</option>
+                            <option value="Entire villa">Entire villa</option>
+                            <option value="Entire home">Entire home</option>
+                            <option value="Entire vacation home">Entire vacation home</option>
+                            <option value="Entire home/apt">Entire home/apt</option>
+                            <option value="Entire cottage">Entire cottage</option>
+                            <option value="Entire condo">Entire condo</option>
+                            <option value="Entire rental unit">Entire rental unit</option>
+                            <option value="Entire serviced apartment">Entire serviced apartment</option>
+                            <option value="Entire place">Entire place</option>
+                            <option value="Entire cabin">Entire cabin</option>
+                            <option value="Entire chalet">Entire chalet</option>
+                        </optgroup>
 
-        <!-- Private Rooms -->
-        <optgroup label="Private Rooms">
-            <option value="Private room in home">Private room in home</option>
-            <option value="Private room in villa">Private room in villa</option>
-            <option value="Private room in nature lodge">Private room in nature lodge</option>
-            <option value="Private room in resort">Private room in resort</option>
-            <option value="Private room in bed and breakfast">Private room in bed and breakfast</option>
-            <option value="Private room in chalet">Private room in chalet</option>
-            <option value="Private room in cottage">Private room in cottage</option>
-            <option value="Private room in bungalow">Private room in bungalow</option>
-            <option value="Private room in farm stay">Private room in farm stay</option>
-            <option value="Private room in condo">Private room in condo</option>
-            <option value="Private room in castle">Private room in castle</option>
-            <option value="Private room in earthen home">Private room in earthen home</option>
-        </optgroup>
+                        <!-- Private Rooms -->
+                        <optgroup label="Private Rooms">
+                            <option value="Private room in home">Private room in home</option>
+                            <option value="Private room in villa">Private room in villa</option>
+                            <option value="Private room in nature lodge">Private room in nature lodge</option>
+                            <option value="Private room in resort">Private room in resort</option>
+                            <option value="Private room in bed and breakfast">Private room in bed and breakfast</option>
+                            <option value="Private room in chalet">Private room in chalet</option>
+                            <option value="Private room in cottage">Private room in cottage</option>
+                            <option value="Private room in bungalow">Private room in bungalow</option>
+                            <option value="Private room in farm stay">Private room in farm stay</option>
+                            <option value="Private room in condo">Private room in condo</option>
+                            <option value="Private room in castle">Private room in castle</option>
+                            <option value="Private room in earthen home">Private room in earthen home</option>
+                        </optgroup>
 
-        <!-- Shared Spaces -->
-        <optgroup label="Shared Spaces">
-            <option value="Shared room in rental unit">Shared room in rental unit</option>
-            <option value="Shared room in guest suite">Shared room in guest suite</option>
-        </optgroup>
+                        <!-- Shared Spaces -->
+                        <optgroup label="Shared Spaces">
+                            <option value="Shared room in rental unit">Shared room in rental unit</option>
+                            <option value="Shared room in guest suite">Shared room in guest suite</option>
+                        </optgroup>
 
-        <!-- Unique Stays -->
-        <optgroup label="Unique Stays - Experiential Stays">
-            <option value="Houseboat">Houseboat</option>
-            <option value="Boat">Boat</option>
-            <option value="Treehouse">Treehouse</option>
-            <option value="Castle">Castle</option>
-            <option value="Camper/RV">Camper/RV</option>
-            <option value="Tent">Tent</option>
-            <option value="Campsite">Campsite</option>
-        </optgroup>
+                        <!-- Unique Stays -->
+                        <optgroup label="Unique Stays - Experiential Stays">
+                            <option value="Houseboat">Houseboat</option>
+                            <option value="Boat">Boat</option>
+                            <option value="Treehouse">Treehouse</option>
+                            <option value="Castle">Castle</option>
+                            <option value="Camper/RV">Camper/RV</option>
+                            <option value="Tent">Tent</option>
+                            <option value="Campsite">Campsite</option>
+                        </optgroup>
 
-        <optgroup label="Unique Stays - Hotels and Lodges">
-            <option value="Room in serviced apartment">Room in serviced apartment</option>
-            <option value="Room in hotel">Room in hotel</option>
-            <option value="Room in boutique hotel">Room in boutique hotel</option>
-            <option value="Room in heritage hotel">Room in heritage hotel</option>
-            <option value="Room in resort">Room in resort</option>
-        </optgroup>
-    </select>
-    <br>
+                        <optgroup label="Unique Stays - Hotels and Lodges">
+                            <option value="Room in serviced apartment">Room in serviced apartment</option>
+                            <option value="Room in hotel">Room in hotel</option>
+                            <option value="Room in boutique hotel">Room in boutique hotel</option>
+                            <option value="Room in heritage hotel">Room in heritage hotel</option>
+                            <option value="Room in resort">Room in resort</option>
+                        </optgroup>
+                    </select>
+                    <br>
 
                 <label for="number_of_guests">Number of Guests:</label>
                 <input type="number" name="number_of_guests" required><br>
@@ -122,6 +177,7 @@
             $(document).ready(function() {
                 $('#room_type').select2(); // Apply Select2 to room type dropdown
             });
+            
         </script>
         <script src="{{ url_for('static', filename='js/index.js') }}"></script>
     </body>

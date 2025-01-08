@@ -1,0 +1,179 @@
+/* CSS for Hero, About, Features, and How It Works Sections */
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f4f2;
+    color: #3D211A;
+}
+.hometab{
+    margin:0;
+    padding:0;
+    max-width: none;
+}
+
+h2, h3 {
+    color: #3D211A;
+}
+
+/* Hero Section Styling */
+.hero {
+    background-color: #3D211A;
+    color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.cta-buttons a {
+    display: inline-block;
+    background-color: #c98e5b;
+    color: #3D211A;
+    padding: 12px 20px;
+    margin: 5px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.cta-buttons a:hover {
+    background-color: #aa784d;
+}
+
+/* About Section Styling */
+.about {
+    background-color: #feffdb;
+    padding: 40px 20px;
+}
+
+.about h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.about p {
+    font-size: 18px;
+    text-align: center;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Features Section Styling */
+.features {
+    background-color: #fdf7cd;
+    padding: 40px 20px;
+}
+
+.features h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.features ul {
+    list-style-type: none;
+    padding: 0;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.features li {
+    font-size: 18px;
+    margin-bottom: 10px;
+    line-height: 1.6;
+    background-color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* How It Works Section Styling */
+.how-it-works {
+    background-color: #feffdb;
+    padding: 40px 20px;
+}
+
+.how-it-works h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.how-it-works ol {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+    counter-reset: step-counter;
+}
+
+.how-it-works li {
+    font-size: 18px;
+    margin-bottom: 15px;
+    line-height: 1.6;
+    background-color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+
+
+.hero {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+}
+
+.carousel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-text {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: #fff;
+    background-color: rgba(61, 33, 26, 0.7);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.carousel-text h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.carousel-text p {
+    font-size: 18px;
+}

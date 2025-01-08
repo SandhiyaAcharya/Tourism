@@ -3,7 +3,7 @@ import pandas as pd
 import joblib
 import xgboost as xgb
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='static')
 
 # Load the dataset, preprocessor and model
 data = pd.read_csv('Airbnb_India_dataset.csv') 
@@ -17,10 +17,6 @@ def main():
     unique_locations = data['address'].dropna().unique()
     unique_locations = sorted(unique_locations)  # Sort alphabetically
     return render_template('index.html', locations=unique_locations)
-
-@app.route('/home')
-def home():
-    return render_template('home.html')
 
 @app.route('/recommend', methods=['POST'])
 def recommend():
@@ -68,4 +64,4 @@ def predict():
     return render_template('prediction.html', price=predicted_price)
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
+    app.run(host='0.0.0.0', port=80)
